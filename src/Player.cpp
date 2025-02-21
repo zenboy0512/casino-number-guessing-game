@@ -3,10 +3,9 @@
 Player::Player(std::string playerName) : name(playerName), totalWinnings(0) {}
 
 void Player::addWinnings(int amount) {
-    // TODO: Add winnings to the player's total
+    totalWinnings += amount;
 }
 
 int Player::getTotalWinnings() {
-    // TODO: Return the player's total winnings
-    return 0;
+    return totalWinnings;
 }

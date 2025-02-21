@@ -3,7 +3,8 @@
 
 void testGame() {
     Game game(1); // Easy difficulty
-    // TODO: Add unit tests
+    assert(game.generateRandomNumber() >= 1 && game.generateRandomNumber() <= 10);
+    assert(game.checkGuess(5) == false); // Let 5 is not the secret number
 }
 
 int main() {
