@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "../src/Game.h"
 #include <cassert>
 
 void testGame() {
