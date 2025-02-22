@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../src/Game.h"
 #include <cassert>
 
