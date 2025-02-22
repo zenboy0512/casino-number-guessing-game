@@ -1,4 +1,4 @@
-#include "../src/Game.h"
+#include "Game.h"
 #include <cassert>
 
 void testGame() {
@@ -8,5 +8,6 @@ void testGame() {
 
 int main() {
     testGame();
+    std::cout << "All tests passed!" << std::endl;
     return 0;
 }
