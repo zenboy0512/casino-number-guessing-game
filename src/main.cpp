@@ -1,7 +1,7 @@
-#include <iostream>  // For std::cout, std::cin, std::endl
-#include <string>    // For std::string
-#include <cstdlib>   // For std::getenv
-#include <limits>    // For std::numeric_limits
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <limits>
 
 #include "Game.h"
 #include "Player.h"
