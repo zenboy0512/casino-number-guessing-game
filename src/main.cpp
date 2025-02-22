@@ -1,3 +1,11 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <limits>
+
+#include "Game.h"
+#include "Player.h"
+
 int main() {
     std::cout << "Welcome to the Casino Number Guessing Game!" << std::endl;
 
@@ -14,4 +22,5 @@ int main() {
     }
 
     // TODO: Implement the game logic
+    return 0;
 }
