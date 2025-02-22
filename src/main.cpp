@@ -9,26 +9,22 @@
 int main() {
     std::cout << "Welcome to the Casino Number Guessing Game!" << std::endl;
 
-    // Check if running in a non-interactive environment (e.g., Jenkins)
     bool isNonInteractive = (std::getenv("JENKINS_HOME") != nullptr);
 
     std::string playerName;
     int difficulty;
 
     if (isNonInteractive) {
-        // Use default values for non-interactive mode
         playerName = "Jenkins";
-        difficulty = 1; // Easy
+        difficulty = 1;
         std::cout << "Running in non-interactive mode. Using default values." << std::endl;
     } else {
-        // Prompt for user input in interactive mode
         std::cout << "Enter your name: ";
         std::cin >> playerName;
 
         std::cout << "Choose difficulty (1: Easy, 2: Medium, 3: Hard): ";
         std::cin >> difficulty;
 
-        // Validate difficulty input
         while (difficulty < 1 || difficulty > 3) {
             std::cout << "Invalid difficulty! Choose 1 (Easy), 2 (Medium), or 3 (Hard): ";
             std::cin >> difficulty;
@@ -42,16 +38,14 @@ int main() {
 
     while (!hasWon) {
         if (isNonInteractive) {
-            // Use a predefined guess in non-interactive mode
-            guess = game.generateRandomNumber(); // Guess the correct number
+            guess = game.generateRandomNumber();
         } else {
             std::cout << "Enter your guess: ";
             std::cin >> guess;
 
-            // Validate guess input
             if (std::cin.fail()) {
-                std::cin.clear(); // Clear the error flag
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 std::cout << "Invalid input! Please enter a number." << std::endl;
                 continue;
             }
