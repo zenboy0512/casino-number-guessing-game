@@ -33,12 +33,16 @@ int main() {
 
     Player player(playerName);
     Game game(difficulty);
+
+    int secretNumber = game.generateRandomNumber();
+    std::cout << "Generated number: " << secretNumber << std::endl;
+
     int guess, attempts = 0;
     bool hasWon = false;
 
     while (!hasWon) {
         if (isNonInteractive) {
-            guess = game.generateRandomNumber();
+            guess = rand() % 100 + 1;
         } else {
             std::cout << "Enter your guess: ";
             std::cin >> guess;

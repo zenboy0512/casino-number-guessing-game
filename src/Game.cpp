@@ -1,6 +1,7 @@
 #include "Game.h"
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 
 Game::Game(int level) : difficultyLevel(level) {
     srand(time(0));
@@ -15,7 +16,9 @@ int Game::generateRandomNumber() {
         case 3: maxNumber = 100; break; // Hard
         default: maxNumber = 10;
     }
-    return rand() % maxNumber + 1;
+    int randomNumber = rand() % maxNumber + 1;
+    std::cout << "Generated random number: " << randomNumber << std::endl;
+    return randomNumber;
 }
 
 bool Game::checkGuess(int guess) {
