@@ -1,11 +1,11 @@
 #include <iostream>
-#include "../src/Game.h"
+#include "../src/game.h"
 #include <cassert>
 
 void testGame() {
     Game game(1); // Easy difficulty
 
-    int secretNumber = game.generateRandomNumber();
+    int secretNumber = game.getSecretNumber();
 
     assert(secretNumber >= 1 && secretNumber <= 10);
 

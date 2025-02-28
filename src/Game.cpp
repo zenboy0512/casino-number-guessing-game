@@ -1,14 +1,8 @@
-#include "Game.h"
+#include "game.h"
 #include <cstdlib>
-#include <ctime>
 #include <iostream>
 
 Game::Game(int level) : difficultyLevel(level) {
-    srand(time(0));
-    secretNumber = generateRandomNumber();
-}
-
-int Game::generateRandomNumber() {
     int maxNumber;
     switch (difficultyLevel) {
         case 1: maxNumber = 10; break; // Easy
@@ -16,22 +10,24 @@ int Game::generateRandomNumber() {
         case 3: maxNumber = 100; break; // Hard
         default: maxNumber = 10;
     }
-    int randomNumber = rand() % maxNumber + 1;
-    std::cout << "Generated random number: " << randomNumber << std::endl;
-    return randomNumber;
+    secretNumber = rand() % maxNumber + 1;
 }
 
-bool Game::checkGuess(int guess) {
+int Game::getSecretNumber() const {
+    return secretNumber;
+}
+
+bool Game::checkGuess(int guess) const {
     return guess == secretNumber;
 }
 
-int Game::calculatePrize(int attempts) {
-    int basePrize;
+float Game::calculatePrize(int attempts) const {
+    float basePrize;
     switch (difficultyLevel) {
-        case 1: basePrize = 100; break; // Easy
-        case 2: basePrize = 500; break; // Medium
-        case 3: basePrize = 1000; break; // Hard
-        default: basePrize = 100;
+        case 1: basePrize = 100.0f; break; // Easy
+        case 2: basePrize = 500.0f; break; // Medium
+        case 3: basePrize = 1000.0f; break; // Hard
+        default: basePrize = 100.0f;
     }
     return basePrize / attempts;
 }

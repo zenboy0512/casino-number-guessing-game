@@ -1,11 +1,11 @@
-#include "Player.h"
+#include "player.h"
 
-Player::Player(std::string playerName) : name(playerName), totalWinnings(0) {}
+Player::Player(std::string playerName) : name(playerName), totalWinnings(0.0f) {}
 
-void Player::addWinnings(int amount) {
+void Player::addWinnings(float amount) {
     totalWinnings += amount;
 }
 
-int Player::getTotalWinnings() {
+float Player::getTotalWinnings() {
     return totalWinnings;
 }

@@ -1,4 +1,4 @@
-# Casino Number Guessing Game (Solution)
+# Casino Number Guessing Game
 
 Welcome to the Casino Number Guessing Game! This is the complete solution for the project.
 

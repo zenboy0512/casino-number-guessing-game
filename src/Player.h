@@ -6,11 +6,11 @@
 class Player {
 private:
     std::string name;
-    int totalWinnings;
+    float totalWinnings;
 public:
     Player(std::string playerName);
-    void addWinnings(int amount);
-    int getTotalWinnings();
+    void addWinnings(float amount);
+    float getTotalWinnings();
 };
 
 #endif

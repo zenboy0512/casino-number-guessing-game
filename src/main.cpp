@@ -2,11 +2,15 @@
 #include <string>
 #include <cstdlib>
 #include <limits>
+#include <iomanip>
+#include <ctime>
 
-#include "Game.h"
-#include "Player.h"
+#include "game.h"
+#include "player.h"
 
 int main() {
+    std::srand(std::time(0));
+
     std::cout << "Welcome to the Casino Number Guessing Game!" << std::endl;
 
     bool isNonInteractive = (std::getenv("JENKINS_HOME") != nullptr);
@@ -34,7 +38,7 @@ int main() {
     Player player(playerName);
     Game game(difficulty);
 
-    int secretNumber = game.generateRandomNumber();
+    int secretNumber = game.getSecretNumber();
     std::cout << "Generated number: " << secretNumber << std::endl;
 
     int guess, attempts = 0;
@@ -59,15 +63,14 @@ int main() {
 
         if (game.checkGuess(guess)) {
             std::cout << "Congratulations! You guessed the number!" << std::endl;
-            int prize = game.calculatePrize(attempts);
+            float prize = game.calculatePrize(attempts);
             player.addWinnings(prize);
-            std::cout << "You won $" << prize << "!" << std::endl;
+            std::cout << "You won $" << std::fixed << std::setprecision(2) << prize << "!" << std::endl;
             hasWon = true;
         } else {
             std::cout << "Wrong guess! Try again." << std::endl;
         }
     }
 
-    // TODO: Implement the game logic
     return 0;
 }
