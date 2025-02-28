@@ -62,7 +62,7 @@ int main() {
         attempts++;
 
         if (game.checkGuess(guess)) {
-            std::cout << "Congratulations! You guessed the number!" << std::endl;
+            std::cout << "Congratulations! You guessed the number" << std::endl;
             float prize = game.calculatePrize(attempts);
             player.addWinnings(prize);
             std::cout << "You won $" << std::fixed << std::setprecision(2) << prize << "!" << std::endl;
