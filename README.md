@@ -1,6 +1,13 @@
-# Casino Number Guessing Game (Skeleton)
+# Casino Number Guessing Game (Solution)
 
-Welcome to the Casino Number Guessing Game! This is a skeleton project for learning how to build a C++ application and integrate it with Jenkins for CI/CD.
+Welcome to the Casino Number Guessing Game! This is the complete solution for the project.
+
+## How to Play
+
+1. Enter your name.
+2. Choose a difficulty level (Easy, Medium, Hard).
+3. Guess the secret number within the allowed range.
+4. Win money based on your performance!
 
 ## Project Structure
 
@@ -24,35 +31,18 @@ Welcome to the Casino Number Guessing Game! This is a skeleton project for learn
     ```
 
 3. Run the game:
-
     ```
     ./build/casino_game
     ```
 
 4. Run the tests:
-
     ```
     ./build/test_game
     ```
 
-
-## TODO
-
-- Implement the Game::generateRandomNumber() method.
-
-- Implement the Game::checkGuess() method.
-
-- Implement the Game::calculatePrize() method.
-
-- Implement the Player::addWinnings() method.
-
-- Implement the Player::getTotalWinnings() method.
-
-- Add unit tests in tests/test_game.cpp.
-
 ## Jenkins Pipeline
 
-#### To run the Jenkins pipeline:
+To run the Jenkins pipeline:
 
 1.Set up Jenkins with the C++ profile.
 

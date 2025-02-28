@@ -1,4 +1,4 @@
 #include "Game.h"
 #include "Player.h"
 
-// TODO: Implement Casino logic (optional)
+// Casino logic is optional and not implemented in this example.
