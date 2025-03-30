@@ -3,4 +3,4 @@ updates:
   - package-ecosystem: "cmake"
     directory: "/"
     schedule:
-      interval: "zeekly"
+      interval: "weekly"
